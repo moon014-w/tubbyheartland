@@ -119,72 +119,43 @@
                 <a href="#">Twitter</a>
             </div>
         </div>
+
+        <section id="contacto" class="contact-section">
+            <div class="container">
+                <h2>Contáctanos</h2>
+                <p>¿Tienes alguna pregunta para adoptar a un Teletuby? ¡Cuéntanos!</p>
+                
+                    <div id="contenedorContacto" class="contact-form">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombreContacto">
+                        <label for="email">Email:</label>
+                        <input type="text" id="emailContacto">
+                        <label for="Mensaje">Mensaje:</label>
+                        <input type="text" id="mensajeContacto">
+                        <button id="enviarContacto">Enviar Mensaje</button>
+                    </div>
+                
+            </div>
+            </section>
+            <section id="Contacto" class="call-to-action-section">
+                <div class="container">
+                    <h3>También puedes unirte a nuestra comunidad</h3>
+                    <p>Puedes contactarnos por los siguientes medios:</p>
+                    <a href="#adoptar" class="btn primary-btn">Adoptar un Teletuby</a>
+                    <li>
+                        <strong>
+                            Teléfono:
+                        </strong>
+                        <a class="color" href="tel: +52 1 871 576 6757"></a>
+                    </li>
+                </div>
+        </section>
+
     </footer>
+
+    <script type="module" src="./js/insex.js"></script>
 </body>
 </html>
 
-<section id="contacto" class="contact-section">
-<div class="container">
-    <h2>Contáctanos</h2>
-    <p>¿Tienes alguna pregunta para adoptar a un Teletuby? ¡Cuéntanos!</p>
-    <form action="procesamiento.php" method="post">
-        <div class="contact-form">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required>
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email" required>
-            <label for="Mensaje">Mensaje:</label>
-            <input type="text" id="mensaje" name="mensaje" required>
-            <button type="submit">Enviar Mensaje</button>
-        </div>
-    </form>
-</div>
-</section>
-<section id="Contacto" class="call-to-action-section">
-    <div class="container">
-        <h3>También puedes unirte a nuestra comunidad</h3>
-        <p>Puedes contactarnos por los siguientes medios:</p>
-        <a href="#adoptar" class="btn primary-btn">Adoptar un Teletuby</a>
-        <li>
-            <strong>
-                Teléfono:
-            </strong>
-            <a class="color" href="tel: +52 1 871 576 6757"></a>
-        </li>
-    </div>
-    
-</section>
 
-const teletubbies:Teletubby[] = [
-    {
-        id:1,
-        name:"Tinky Winky",
-        color:"Purple",
-        price: $200,
-        imegeUrl:"./img/tinkywinky.png"
-        description: "El más grande y el más viejo de los Teletubbies, conocido por su triángulo en la cabeza y su bolso rojo."
-    },
-     { 
-     id: 2, 
-     name: 'Dipsy', 
-     color: 'green', 
-     price: 25.99, 
-     imageUrl: 'https://images.unsplash.com/photo-1509233725247-49e657c54213?q=80&w=800&auto=format&fit=crop', 
-     description: 'Relajado y estiloso, con su sombrero de vaca blanco y negro. Le encanta bailar.' 
-    },
-    { 
-     id: 3, 
-     name: 'Laa-Laa', 
-     color: 'yellow', 
-     price: 27.99, 
-     imageUrl: 'https://images.unsplash.com/photo-1488859082932-d593734549af?q=80&w=800&auto=format&fit=crop', 
-     description: 'Dulce y maternal, ama cantar y bailar con su gran pelota naranja.' 
-  },
-    { 
-     id: 4, 
-     name: 'Po', 
-     color: 'red', 
-     price: 24.99, 
-     imageUrl: 'https://images.unsplash.com/photo-1579546929518-9e396f3cc809?q=80&w=800&auto=format&fit=crop', 
-     description: 'La más pequeña y traviesa. Es bilingüe y adora su patinete azul y rosa.' 
-  },
+
