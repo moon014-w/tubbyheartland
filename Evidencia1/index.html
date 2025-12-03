@@ -33,7 +33,7 @@
                     <a href="#comunidad" class="btn secondary-btn">Más sobre la Comunidad</a>
                 </div>
                 <div class="hero-image">
-                    
+                    <img src="./img/fotodeperfil.jpg" alt="">
                 </div>
             </div>
         </section>
@@ -72,40 +72,94 @@
                         <h4>Tinky Winky</h4>
                         
                          <!-- Teletubby 1: Tinky Winky (fila 1, centro) -->
-                          <div class="teletubby-item-single">
-                          <img src="./img/tinkywinky.jpg" alt="Tinky Winky" class="teletubby-image">
-                          <p class="teletubby-price">$210</p> <!-- Precio de Tinky Winky -->
-                         <a href="#" class="btn adopt-button-small btn-purple">Adoptar</a> <!-- Clase para botón púrpura -->
-                    </div>
+                        <div class="teletubby-item-single">
+                            <img src="./img/tinkywinky.jpg" alt="Tinky Winky" class="teletubby-image">
+                            <p class="teletubby-price">$210</p> <!-- Precio de Tinky Winky -->
+                            <a href="#" class="btn adopt-button-small btn-purple" data-name="Tinky Winky" data-price="$210">Adoptar</a> <!-- Clase para botón púrpura -->
+                        </div>
+                    </div>    
                     <div class="teletuby-card">
                         
                         <h4>Dipsy</h4>
                          <!-- Teletubby 2: Dipsy (fila 2, izquierda) -->
                          <div class="teletubby-item">
-                         <img src="./img/dipsy.jpg" alt="Dipsy" class="teletubby-image">
-                         <p class="teletubby-price">$210</p> <!-- Precio de Dipsy -->
-                        <a href="#" class="btn adopt-button-small btn-green">Adoptar</a> <!-- Clase para botón verde -->
-                    </div>
+                            <img src="./img/dipsy.jpg" alt="Dipsy" class="teletubby-image">
+                            <p class="teletubby-price">$210</p> <!-- Precio de Dipsy -->
+                            <a href="#" class="btn adopt-button-small btn-green" data-name="Dipsy" data-price="$210">Adoptar</a> <!-- Clase para botón verde -->
+                        </div>
+                    </div>    
                     <div class="teletuby-card">
                         
                         <h4>Laa-Laa</h4>
                          <!-- Teletubby 3: Laa-Laa (fila 2, derecha) -->
                          <div class="teletubby-item">
-                         <img src="./img/lala.jpg" alt="Laa-Laa" class="teletubby-image">
-                         <p class="teletubby-price">$210</p> <!-- Precio de Laa-Laa -->
-                         <a href="#" class="btn adopt-button-small btn-yellow">Adoptar</a> <!-- Clase para botón amarillo -->
-                    </div>
+                            <img src="./img/lala.jpg" alt="Laa-Laa" class="teletubby-image">
+                            <p class="teletubby-price">$210</p> <!-- Precio de Laa-Laa -->
+                            <a href="#" class="btn adopt-button-small btn-yellow" data-name="Laa-Laa" data-price="$210">Adoptar</a> <!-- Clase para botón amarillo -->
+                        </div>
+                    </div>    
                     <div class="teletuby-card">
                         
                         <h4>Po</h4>
                          <!-- Teletubby 4: Po (fila 3, izquierda) -->
                          <div class="teletubby-item">
-                         <img src="./img/poo.jpg" alt="Po" class="teletubby-image">
-                         <p class="teletubby-price">$210</p> <!-- Precio de Po -->
-                         <a href="#" class="btn adopt-button-small btn-red">Adoptar</a> <!-- Clase para botón rojo -->
-                    </div>
+                            <img src="./img/poo.jpg" alt="Po" class="teletubby-image">
+                            <p class="teletubby-price">$210</p> <!-- Precio de Po -->
+                            <a href="#" class="btn adopt-button-small btn-red" data-name="Po" data-price="$210">Adoptar</a> <!-- Clase para botón rojo -->
+                        </div>
+                    </div>    
                 </div>
                 <p class="small-text">¡Cada Teletuby tiene su propia personalidad única!</p>
+            </div>
+            <!-- Purchase Modal -->
+            <div id="purchaseModal" class="modal" aria-hidden="true" style="display:none;">
+                <div class="modal-overlay" data-close></div>
+                <div class="modal-content" role="dialog" aria-modal="true">
+                    <button class="modal-close" id="modalClose" aria-label="Cerrar">✕</button>
+                    <h3 id="modalTitle">Adoptar Teletubby</h3>
+                    <form id="purchaseForm">
+                        <label for="teletubbyName">Teletubby</label>
+                        <input type="text" id="teletubbyName" name="teletubbyName" readonly>
+
+                        <label for="userType">Nombre que le pondrás a tu hijo</label>
+                        <input type="text" id="userType" name="userType" required>
+
+                        <label for="userType">Nombre del Padre</label>
+                        <input type="text" id="userType" name="userType" placeholder="Nombre completo" required>
+
+                          <label for="userType">Nombre de la Madre</label>
+                        <input type="text" id="userType" name="userType" placeholder="Nombre completo" required>
+
+                        <!-- si usas el campo buyerName -->
+                        <label for="buyerName">Nombre</label>
+                        <input type="text" id="buyerName" name="buyerName" placeholder="Tu nombre" required>
+                        
+                        <label for="buyerEmail">Correo</label>
+                        <input type="email" id="buyerEmail" name="buyerEmail" required>
+
+                        <label for="teletubbyPrice">Costo</label>
+                        <input type="text" id="teletubbyPrice" name="teletubbyPrice" readonly>
+
+                        <label for="location">Ubicación</label>
+                        <input type="text" id="location" name="location" required>
+
+                        <label for="cardNumber">Número de tarjeta</label>
+                        <input type="text" id="cardNumber" name="cardNumber" inputmode="numeric" maxlength="19" placeholder="1234 5678 9012 3456" required>
+
+                        <label for="cardType">Tipo de tarjeta</label>
+                        <select id="cardType" name="cardType" required>
+                            <option value="">Seleccione</option>
+                            <option value="debit">Débito</option>
+                            <option value="credit">Crédito</option>
+                        </select>
+
+                        <div class="modal-actions">
+                            <button type="submit" class="btn primary-btn">Adoptar</button>
+                            <button type="button" class="btn" id="modalCancel">Cancelar</button>
+                        </div>
+                    </form>
+                    <div id="modalMessage" style="display:none;"></div>
+                </div>
             </div>
         </section>
     </main>
@@ -143,10 +197,8 @@
                     <p>Puedes contactarnos por los siguientes medios:</p>
                     <a href="#adoptar" class="btn primary-btn">Adoptar un Teletuby</a>
                     <li>
-                        <strong>
-                            Teléfono:
-                        </strong>
-                        <a class="color" href="tel: +52 1 871 576 6757"></a>
+                        <strong>Teléfono:</strong>
+                        <a class="color" href="tel:+5218715766757">+52 1 871 576 6757</a>
                     </li>
                 </div>
         </section>
